@@ -70,6 +70,7 @@ const Mylight = ()=>{
   </RigidBody>
 }
 
+
 const Model = () => {
 
   //Load the 3D model
