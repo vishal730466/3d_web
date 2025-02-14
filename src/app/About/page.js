@@ -41,8 +41,15 @@ const Mymetal = ()=>{
 
 const Github3 = ()=>{
   const {scene} = useGLTF("models/github3.glb")
-
-  return <RigidBody position={[0,1,1]}>
+  //  position  
+  return <RigidBody position={[4,3,-5]}>    
+    <primitive object ={scene}/>
+  </RigidBody>
+}
+const Banner = ()=>{
+  const {scene} = useGLTF("models/banner.glb")
+  //  position  
+  return <RigidBody position={[6,3,5]}>    
     <primitive object ={scene}/>
   </RigidBody>
 }
@@ -54,10 +61,41 @@ const Mongo = ()=>{
     <primitive object ={scene}/>
   </RigidBody>
 }
+const Vercel = ()=>{
+  const {scene} = useGLTF("models/vercel.glb")
+
+  return <RigidBody position={[-4,1,1]}>
+    <primitive object ={scene}/>
+  </RigidBody>
+}
+
+const Vscode = ()=>{
+  const {scene} = useGLTF("models/vscode.glb")
+
+  return <RigidBody position={[0,1,-5]}>
+    <primitive object ={scene}/>
+  </RigidBody>
+}
 const Git = ()=>{
   const {scene} = useGLTF("models/git.glb")
+  // back/for up/down left/right
+  return <RigidBody position={[4,0,-6]}>
+    <primitive object ={scene}/>
+  </RigidBody>
+}
 
-  return <RigidBody position={[0,1,1]}>
+const Nextjs = ()=>{
+  const {scene} = useGLTF("models/nextjs.glb")
+
+  return <RigidBody position={[-2,5,-3]}>
+    <primitive object ={scene}/>
+  </RigidBody>
+}
+
+const Js = ()=>{
+  const {scene} = useGLTF("models/js.glb")
+
+  return <RigidBody position={[0,5,1]}>
     <primitive object ={scene}/>
   </RigidBody>
 }
@@ -95,26 +133,30 @@ const Model = () => {
 
 const About = () => {
   return (
-    <div>page obj
+    <div>
 
     <div style={{ width: '100vw', height: '100vh' }}>
   
       <Canvas camera={{position:[13,15,0],fov:30}}>
-      <OrbitControls maxPolarAngle={1.4}  minPolarAngle={1.2} enableZoom={true}/>
+      <OrbitControls maxPolarAngle={1.4}  minPolarAngle={1.2} enableZoom={false}/>
 
-       <ambientLight intensity={0.5} /> 
+       <ambientLight intensity={1} /> 
       
-       <directionalLight position={[1, 14, 1]} intensity={1} /> 
+       <directionalLight position={[1, 14, 1]} intensity={2} /> 
 
         
       <Physics>
         {/* <Mylight/> */}
-        <Mymetal/>
-        <Model/>
-        <FallingBox  />
+        {/* <Mymetal/> */}
+        {/* <Model/> */}
+        {/* <FallingBox  /> */}
         <Mongo/>
-        
+        <Vscode/>
+        <Vercel/>
         <Github3/>
+        <Nextjs/>
+        <Banner/>
+        <Js/>
         <Git/>
         <GroundPlane />
      
