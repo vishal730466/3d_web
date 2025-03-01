@@ -43,7 +43,7 @@ const Search = () => {
           <primitive object ={scene} onPointerDown={()=>{setval(val+1) }}/>
       </RigidBody>
     }
-    
+
     
     const Down = ()=>{
       const {scene} = useGLTF("models/searchbar/down.glb")
@@ -59,14 +59,15 @@ const Search = () => {
     <OrbitControls/>
     
                <UP/>
-               <Enter/>
-               {/* <GroundPlane/>  */}
-            <Down/>
+               {/* <Enter/> */}
+            {/* <Down/> */}
             <Box/>
             <ambientLight intensity={2} color={"white"}/>
             <directionalLight position={[0,5,12]} intensity={.5}/>
             </Physics>
-        </Canvas> {val}</div>
+        </Canvas> 
+        {val}
+        </div>
 
   )
 }
