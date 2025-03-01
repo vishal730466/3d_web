@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import About from "./About/page";
 import { Canvas } from "@react-three/fiber";
 import MovingBox from "./car/page";
+import Search from "./searchboard/page";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
      {/* <ThreeDObject/> */}
      
      <About/>
+     <Search/>
 
     </div>
   );
