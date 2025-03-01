@@ -58,7 +58,7 @@ const Search = () => {
             <Physics>
     <OrbitControls/>
     
-               <UP/>
+               {/* <UP/> */}
                <Enterbtn/>
             <Down/>
             <Box/>
