@@ -44,6 +44,7 @@ const Search = () => {
       </RigidBody>
     }
     
+    
     const Down = ()=>{
       const {scene} = useGLTF("models/searchbar/down.glb")
       return <RigidBody position={[3 ,-1,8]} type='fixed'>
