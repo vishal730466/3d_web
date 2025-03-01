@@ -60,7 +60,7 @@ const Search = () => {
     
                <UP/>
                {/* <Enter/> */}
-            {/* <Down/> */}
+            <Down/>
             <Box/>
             <ambientLight intensity={2} color={"white"}/>
             <directionalLight position={[0,5,12]} intensity={.5}/>
