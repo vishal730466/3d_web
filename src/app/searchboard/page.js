@@ -58,8 +58,8 @@ const Search = () => {
             <Physics>
     <OrbitControls/>
     
-               {/* <UP/> */}
-               <Enterbtn/>
+               <UP/>
+               {/* <Enterbtn/> */}
             <Down/>
             <Box/>
             <ambientLight intensity={2} color={"white"}/>
