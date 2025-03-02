@@ -67,7 +67,7 @@ const Search = () => {
         <Canvas  camera={{ position: [0, 6, 13], fov: 45 }}>
             <Physics>
     <OrbitControls enableZoom={false} enableRotate={true}  minPolarAngle={Math.PI / 2.7} 
-    maxPolarAngle={Math.PI / 2.7}  minAzimuthAngle={-0.4}  maxAzimuthAngle={0.3 }/>{/* left */}
+    maxPolarAngle={Math.PI / 2.7}  minAzimuthAngle={-0.2}  maxAzimuthAngle={0.2 }/>{/* left */}
     
                <UP/>
                <Enterbtn />
