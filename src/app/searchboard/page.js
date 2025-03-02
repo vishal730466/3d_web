@@ -25,21 +25,21 @@ const Search = () => {
 
     const Box = ()=>{
         const {scene} = useGLTF("models/searchbar/searchboard.glb")
-        return <RigidBody position={[3,-1,6.5]} type='fixed'>
+        return <RigidBody position={[2.5,-1,6.2]} type='fixed'>
             <primitive object ={scene}/>
         </RigidBody>
       }
 
       const Enterbtn = ()=>{
         const {scene} = useGLTF("models/searchbar/table.glb")
-        return <RigidBody position={[8,-1,7]} type='fixed'>
+        return <RigidBody position={[8,-1,7.5]} type='fixed'>
             <primitive object ={scene} onPointerDown={()=>{setval(val+1) }}/>
         </RigidBody>
       }
 
     const UP = ()=>{
       const {scene} = useGLTF("models/searchbar/up.glb")
-      return <RigidBody position={[-2.4 ,1,3.8]} type='fixed'>
+      return <RigidBody position={[-2.4 ,0.9,4.2]} type='fixed'>
           <primitive object ={scene} onPointerDown={()=>{setval(val+1) }}/>
       </RigidBody>
     }
@@ -47,7 +47,7 @@ const Search = () => {
     
     const Down = ()=>{
       const {scene} = useGLTF("models/searchbar/down.glb")
-      return <RigidBody position={[3 ,-1,8]} type='fixed'>
+      return <RigidBody position={[3 ,-1,8.3]} type='fixed'>
           <primitive object ={scene} onPointerDown={()=>{setval(val-1) }}/>
       </RigidBody>
     }
