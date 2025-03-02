@@ -49,7 +49,7 @@ const Search = () => {
     
     const Down = ()=>{
       const {scene} = useGLTF("models/searchbar/down.glb")
-      return <RigidBody position={[3 ,-1,8.3]} type='fixed'>
+      return <RigidBody position={[3 ,-1,8.5]} type='fixed'>
           <primitive object ={scene} onPointerDown={()=>{setval(val-1) }}/>
       </RigidBody>
     }
