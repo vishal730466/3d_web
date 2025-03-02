@@ -26,7 +26,7 @@ const Search = () => {
   }
 
     const Box = ()=>{
-        const {scene} = useGLTF("models/searchbar/searchboard.glb")
+        const {scene} = useGLTF("models/mob_search/board.glb")
         return <RigidBody position={[2.5,-1,6.2]} type='fixed'>
             <primitive object ={scene}/>
         </RigidBody>
@@ -64,7 +64,7 @@ const Search = () => {
         </div>
     </div>
     <div className='mycanvas'>
-        <Canvas style={{width:"50vw",border:"2px solid",marginLeft:"10vw"}}  camera={{ position: [0, 6, 13], fov: 45 }}>
+        <Canvas style={{width:"100vw",border:"2px solid",marginLeft:"-10vw"}}  camera={{ position: [0, 6, 13], fov: 45 }}>
             <Physics>
     <OrbitControls enableZoom={false} enableRotate={true}  minPolarAngle={Math.PI / 2.7} 
     maxPolarAngle={Math.PI / 2.7}  minAzimuthAngle={-0.2}  maxAzimuthAngle={0.2 }/>{/* left */}
