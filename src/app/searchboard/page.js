@@ -54,7 +54,7 @@ const Search = () => {
 
   return (
     <div>
-        <Canvas style={{height:"90vh"}} camera={{ position: [0, 6, 13], fov: 50 }}>
+        <Canvas style={{height:"90vh",width:"100vw"}} camera={{ position: [0, 6, 13], fov: 34 }}>
             <Physics>
     <OrbitControls/>
     
