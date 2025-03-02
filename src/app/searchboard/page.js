@@ -32,7 +32,7 @@ const Search = () => {
 
       const Enterbtn = ()=>{
         const {scene} = useGLTF("models/searchbar/table.glb")
-        return <RigidBody position={[6,0.5,4.5]} type='fixed'>
+        return <RigidBody position={[8,-1,7]} type='fixed'>
             <primitive object ={scene} onPointerDown={()=>{setval(val+1) }}/>
         </RigidBody>
       }
