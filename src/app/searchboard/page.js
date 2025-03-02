@@ -6,6 +6,8 @@ import { Physics, RigidBody } from "@react-three/rapier";
 import React, { useState } from 'react'
 import { AmbientLight, DirectionalLight, Group } from 'three'
 
+import "./search_style.css"
+
 const Search = () => {
   const [val , setval]=useState(0)
   // const woodTexture = useTexture("wood2.jpg");  
@@ -53,20 +55,30 @@ const Search = () => {
     }
 
   return (
-    <div>
-        <Canvas style={{height:"90vh",width:"100vw"}} camera={{ position: [0, 6, 13], fov: 44 }}>
+    <div className='search_page'>
+      
+    <div className="monitor">
+        <div className="screen">
+          {val}
+            {/* <iframe src="https://example.com"></iframe>  */}
+        </div>
+    </div>
+    <div className='mycanvas'>
+        <Canvas  camera={{ position: [0, 6, 13], fov: 45 }}>
             <Physics>
-    <OrbitControls/>
+    <OrbitControls enableZoom={false} enableRotate={true}  minPolarAngle={Math.PI / 2.7} 
+    maxPolarAngle={Math.PI / 2.7}  minAzimuthAngle={-0.4}  maxAzimuthAngle={0.3 }/>{/* left */}
     
                <UP/>
-               <Enterbtn/>
+               <Enterbtn />
             <Down/>
             <Box/>
             <ambientLight intensity={2} color={"white"}/>
             <directionalLight position={[0,5,12]} intensity={.5}/>
             </Physics>
         </Canvas> 
-        {val}
+        </div>
+        {/* {val} */}
         </div>
 
   )
