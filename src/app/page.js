@@ -11,7 +11,7 @@ export default function Home() {
     <div >
      {/* <ThreeDObject/> */}
      
-     <About/>
+     {/* <About/> */}
      <Search/>
 
     </div>
