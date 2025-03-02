@@ -1,4 +1,6 @@
 "use client"
+
+import { useRouter } from "next/navigation";
 import { Canvas } from '@react-three/fiber'
 
 import { OrbitControls,Box, useGLTF ,useTexture  } from '@react-three/drei';
@@ -7,10 +9,30 @@ import React, { useState } from 'react'
 import { AmbientLight, DirectionalLight, Group } from 'three'
 
 import "./search_style.css"
+// import { useRouter } from 'next/router';
 
 const Search = () => {
   const [val , setval]=useState(0)
-  // const woodTexture = useTexture("wood2.jpg");  
+  const router=useRouter();
+
+  const transfer=()=>{
+    if (val==2) {
+      router.push("https://iamvishal.in/Contact")
+    } else if(val==3) {
+      router.push("https://iamvishal.in/Myskill")
+    }
+  }
+
+  const search_down=()=>{
+    if(val<3){
+      setval(val+1)
+    }
+  }
+  const search_up=()=>{
+    if(val>1){
+      setval(val-1)
+    }
+  }
   
   function GroundPlane() {
     return (
@@ -35,14 +57,14 @@ const Search = () => {
       const Enterbtn = ()=>{
         const {scene} = useGLTF("models/searchbar/table.glb")
         return <RigidBody position={[7.5,-1,7.5]} type='fixed'>
-            <primitive object ={scene} onPointerDown={()=>{setval(val+1) }}/>
+            <primitive object ={scene} onPointerDown={transfer}/>
         </RigidBody>
       }
 
     const UP = ()=>{
       const {scene} = useGLTF("models/searchbar/up.glb")
       return <RigidBody position={[-2.4 ,0.9,4.3]} type='fixed'>
-          <primitive object ={scene} onPointerDown={()=>{setval(val+1) }}/>
+          <primitive object ={scene} onPointerDown={search_up}/>
       </RigidBody>
     }
 
@@ -50,7 +72,7 @@ const Search = () => {
     const Down = ()=>{
       const {scene} = useGLTF("models/searchbar/down.glb")
       return <RigidBody position={[3 ,-1,8.5]} type='fixed'>
-          <primitive object ={scene} onPointerDown={()=>{setval(val-1) }}/>
+          <primitive object ={scene} onPointerDown={search_down}/>
       </RigidBody>
     }
 
@@ -59,8 +81,10 @@ const Search = () => {
       
     <div className="monitor">
         <div className="screen">
+          <div className={`search_heading ${val==1?"search_active":""}`}>Home</div>
+          <div className={`search_heading ${val==2?"search_active":""}`}>Contact</div>
+          <div className={`search_heading ${val==3?"search_active":""}`}>Skills</div>
           {val}
-            {/* <iframe src="https://example.com"></iframe>  */}
         </div>
     </div>
     <div className='mycanvas'>

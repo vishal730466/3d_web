@@ -37,12 +37,19 @@
     /* border-radius: 10px; */
     overflow: hidden;
 }
-
-/* .screen iframe {
+.search_heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
     width: 100%;
-    height: 100%;
-    border: none;
-} */
+    font-size: 5vh;
+    /* border: 2px solid; */
+}
+
+.search_active{
+    background-color: aqua;
+}
 
 .mycanvas{
     height: 70%;
